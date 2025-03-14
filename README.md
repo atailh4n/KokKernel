@@ -55,4 +55,4 @@ Feel free to open issues or contribute to the project!
 
 You can find me and my socials here: [Click here to visit my profile](https://github.com/atailh4n)
 
-Copyright 2024-2025, Ata İlhan Köktürk
+Copyright 2023-2025, Ata İlhan Köktürk
