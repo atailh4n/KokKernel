@@ -21,7 +21,7 @@ But since hasn't have "advanced" memory management and interruptions, after pres
 - A linker software on Windows builds or default GNU linker.
 
 > [!NOTE]
-> Optionally a Linux distro like Ubuntu, because easier and already has linker in it.
+> Optionally use a Linux distro like Ubuntu, because easier and already has linker in it. Windows doesn't
 
 ---
 
