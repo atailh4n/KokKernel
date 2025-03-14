@@ -20,8 +20,8 @@ But since hasn't have "advanced" memory management and interruptions, after pres
 - gcc or any C compiler
 - A linker software on Windows builds or default GNU linker.
 
-[!NOTE]
-Optionally a Linux distro like Ubuntu, because easier and already has linker in it.
+> [!NOTE]
+> Optionally a Linux distro like Ubuntu, because easier and already has linker in it.
 
 ---
 
@@ -33,8 +33,8 @@ or
 
 You can build it via [build_i386.sh](build_i386.sh) and you can use `--fullcln` parameter for clean build.
 
-[!IMPORTANT]
-It automatically starts it. so just be sure you added correct files on [src](src/) in the `OBJS` value at the [src/Makefile](src/Makefile) and `LINKER_FILES` at the [build_i386.sh](build_i386.sh)
+> [!IMPORTANT]
+> It automatically starts it. so just be sure you added correct files on [src](src/) in the `OBJS` value at the [src/Makefile](src/Makefile) and `LINKER_FILES` at the [build_i386.sh](build_i386.sh)
 
 ---
 
