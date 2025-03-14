@@ -1,5 +1,5 @@
-#ifndef SOURCE_DOT_H    /* This is an "include guard" */
-#define SOURCE_DOT_H    /* prevents the file from being included twice. */
+#ifndef SOURCE_DOT_H
+#define SOURCE_DOT_H
 
 #define VGA_ADDRESS 0xB8000   
 
@@ -9,11 +9,13 @@
 #define YELLOW 14
 #define WHITE_COLOR 15
 
-unsigned short* terminal_buffer;
-unsigned int vga_index;
+#include <stdint.h> // uint16_t için gerekli
+
+extern unsigned short* terminal_buffer; // Sadece bildiriyoruz!
+extern unsigned int vga_index; // Tanımlama burada yok!
 
 void print_string(char* str, unsigned char color);
 void print_char(char str, unsigned char color);
 void clear_screen(void);
 
-#endif /* FOO_DOT_H */
+#endif /* SOURCE_DOT_H */

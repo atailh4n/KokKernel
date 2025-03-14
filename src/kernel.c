@@ -1,27 +1,20 @@
 #include "source.h"
 #include "keyboard.h"
 
+void _start (void){
+    main();
+}
 
 void main(void)
 {
-
-    terminal_buffer = (unsigned short*)VGA_ADDRESS;
-    vga_index = 0;
-
+    unsigned short* terminal_buffer = (unsigned short*) VGA_ADDRESS;
     clear_screen();
-    print_string("Hello world!", YELLOW);
-    vga_index = 80;
-    print_string("KokKernel Version 1", RED);
-    vga_index = 160;
-    print_char('b', RED);
-    vga_index = 240;
+    print_string("Kernel loaded.", WHITE_COLOR);
+    print_string("[KokKernel Version 1]", YELLOW);
+    print_string("Ata Ilhan Kokturk - 2025", YELLOW);
     while (1) {
-
-
+        if (vga_index > 26*80) clear_screen();
         keyboard_handler();
-
-
     }
-
     return;
 }
