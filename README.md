@@ -4,7 +4,6 @@
 
 <p align="center">
   <img src="https://img.shields.io/github/license/atailh4n/KokKernel?style=flat-square" alt="GitHub License">
-  <img src="https://img.shields.io/github/package-json/v/atailh4n/KokKernel?style=flat-square" alt="GitHub version">
   <img src="https://img.shields.io/github/last-commit/atailh4n/KokKernel?display_timestamp=author&style=flat-square" alt="GitHub last commit">
 </p>
 
