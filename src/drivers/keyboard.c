@@ -1,6 +1,6 @@
-﻿#include "keyboard.h"
-#include "source.h"
-#include "io.h"
+﻿#include "io.h"
+#include "drivers/keyboard.h"
+#include "drivers/vga.h"
 
 int clicked = 0;
 int canSend = 0;

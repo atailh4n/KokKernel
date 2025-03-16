@@ -1,6 +1,7 @@
 #!/bin/bash
 BUILD_DIR="./build"
-LINKER_FILES="kernel.bin boot.o kernel.o io/keyboard.o source.o"
+DIST_DIR="./dist"
+LINKER_FILES="kernel.bin boot.o kernel.o memorymgr.o lib/itoa.o drivers/keyboard.o drivers/vga.o progs/ez_alloc.o"
 LINKER_OPTS="--no-warn-rwx-segment"
 
 if [[ "$1" == "--fullcln" ]]; then
@@ -15,6 +16,9 @@ if [ -d "$BUILD_DIR" ]; then
 fi
 mkdir "$BUILD_DIR"
 cd "$BUILD_DIR"
+
+echo "unsetting GTK_PATH for VSCode"
+unset GTK_PATH
 
 echo "Copy source files..."
 cp -r ../src/* ./
@@ -36,11 +40,21 @@ fi
 
 echo "SUCC: Compiling is done."
 
+if [[ "$1" == "--dist" ]]; then
+    echo "Copying built kernel to dist folder..."
+    cd ..
+    rm -rf $DIST_DIR
+    mkdir -p $DIST_DIR
+    cp -r $BUILD_DIR/kernel.bin $DIST_DIR/kernel.bin
+    echo "Dist is done!";
+    exit 0;
+fi
+
 echo "Starting QEMU..."
 qemu-system-i386 -kernel kernel.bin
 
 echo "Cleaning obselote files..."
-rm -f *.o kernel.bin
+rm -rf *.o kernel.bin
 cd ..
 
 if [[ "$1" == "--fullcln" ]]; then

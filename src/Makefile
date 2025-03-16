@@ -2,7 +2,7 @@ CC=gcc
 NASM=nasm
 CFLAGS=-m32 -ffreestanding -nostdlib -Wall -Wextra
 LDFLAGS=-m elf_i386 --no-warn-rwx-segment
-OBJS=boot.o kernel.o source.o io/keyboard.o
+OBJS=boot.o kernel.o memorymgr.o lib/itoa.o drivers/vga.o drivers/keyboard.o progs/ez_alloc.o
 INCLUDE_PATH=../includes
 
 # Varsayılan hedef: kernel.bin oluşturulacak

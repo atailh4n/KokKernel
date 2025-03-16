@@ -2,6 +2,15 @@
     "files.associations": {
         "io.h": "c",
         "stdint.h": "c",
-        "interrupt.h": "c"
+        "interrupt.h": "c",
+        "memory.h": "c",
+        "features.h": "c",
+        "string.h": "c",
+        "vga.h": "c",
+        "memorymgr.h": "c",
+        "stdio.h": "c",
+        "itoa.h": "c",
+        "stddef.h": "c",
+        "keyboard.h": "c"
     },
 }
